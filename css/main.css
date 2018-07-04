@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5da7ff;
+  background: #2f78ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2905,7 +2905,7 @@ hr {
   }
 }
 .header {
-  background: #85d2c8;
+  background: #00b38a;
 }
 a {
   color: rgba(39,108,185,0.871);
@@ -2914,10 +2914,11 @@ a:hover {
   color: #f8ae28;
   border-bottom-color: #f8ae28;
 }
-.menu .menu-item a:hover {
-  background: #85d2c8;
+.menu .menu-item a {
+  color: #dedede;
 }
 .menu .menu-item-active a,
 .menu .menu-item a:hover {
+  background: transparent;
   color: #fff;
 }

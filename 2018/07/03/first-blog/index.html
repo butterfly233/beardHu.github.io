@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="使用Hexo,是非常简单的一件事。测试文本">
+<meta name="description" content="新建一个backUp.bat文件，编辑文件内容 BackUp.bat12345678@ECHO  OFFSET PGPASSWORD=adminSET databaseName=062201SET back_path=%cd%SET port=5434SET PSQL=&quot;D:\application\Postgresql\bin\&quot; %PSQL%\\pg_dump -h 127.0.0.1 -p">
 <meta name="keywords" content="hexo,github,npm,基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first-blog">
+<meta property="og:title" content="数据库定时备份">
 <meta property="og:url" content="http://yoursite.com/2018/07/03/first-blog/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="使用Hexo,是非常简单的一件事。测试文本">
+<meta property="og:description" content="新建一个backUp.bat文件，编辑文件内容 BackUp.bat12345678@ECHO  OFFSET PGPASSWORD=adminSET databaseName=062201SET back_path=%cd%SET port=5434SET PSQL=&quot;D:\application\Postgresql\bin\&quot; %PSQL%\\pg_dump -h 127.0.0.1 -p">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T07:55:37.487Z">
+<meta property="og:updated_time" content="2018-07-09T03:15:14.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first-blog">
-<meta name="twitter:description" content="使用Hexo,是非常简单的一件事。测试文本">
+<meta name="twitter:title" content="数据库定时备份">
+<meta name="twitter:description" content="新建一个backUp.bat文件，编辑文件内容 BackUp.bat12345678@ECHO  OFFSET PGPASSWORD=adminSET databaseName=062201SET back_path=%cd%SET port=5434SET PSQL=&quot;D:\application\Postgresql\bin\&quot; %PSQL%\\pg_dump -h 127.0.0.1 -p">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>first-blog | Hexo</title>
+  <title>数据库定时备份 | Hexo</title>
   
 
 
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">first-blog</h1>
+          <h1 class="post-title" itemprop="name headline">数据库定时备份</h1>
         
 
         <div class="post-meta">
@@ -356,8 +356,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
+                  <a href="/categories/PostgreSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">PostgreSQL</span>
                   </a>
                 </span>
 
@@ -393,7 +393,9 @@
       
 
       
-        <p>使用Hexo,是非常简单的一件事。测试文本</p>
+        <p>新建一个backUp.bat文件，编辑文件内容</p>
+<h2 id="BackUp-bat"><a href="#BackUp-bat" class="headerlink" title="BackUp.bat"></a>BackUp.bat</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@ECHO  OFF</span><br><span class="line">SET PGPASSWORD=admin</span><br><span class="line">SET databaseName=062201</span><br><span class="line">SET back_path=%<span class="built_in">cd</span>%</span><br><span class="line">SET port=5434</span><br><span class="line">SET PSQL=<span class="string">"D:\application\Postgresql\bin\"</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">%PSQL%\\pg_dump -h 127.0.0.1 -p %port% -U admin %databaseName% &gt; f:\%databaseName%.bak</span></span><br></pre></td></tr></table></figure>
+<h2 id="将任务添加进定时任务中"><a href="#将任务添加进定时任务中" class="headerlink" title="将任务添加进定时任务中"></a>将任务添加进定时任务中</h2><p> 1：在设置中搜索计划任务，选中任务计划库，在右侧的操作设置中，点击新文件夹，创建新文件夹。<br> 2：选中新建的文件夹，右键–》创建任务，选择【触发器】，进行定时设置，之后选择【操作】，选择要执行的bat文件。</p>
 
       
     </div>
@@ -436,8 +438,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/03/blog/" rel="prev" title="windows下odoo10自动备份">
-                windows下odoo10自动备份 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/03/blog/" rel="prev" title="数据库恢复">
+                数据库恢复 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -490,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -517,7 +528,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -528,7 +539,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -551,6 +562,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BackUp-bat"><span class="nav-number">1.</span> <span class="nav-text">BackUp.bat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将任务添加进定时任务中"><span class="nav-number">2.</span> <span class="nav-text">将任务添加进定时任务中</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
